@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>心理學答題拼圖：古典與操作制約</title>
+  <!-- 引入 p5.js 核心庫 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #2b2d42;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      overflow: hidden;
+      touch-action: none; /* 防止手機滑動時頁面跟著亂晃 */
+    }
+    #canvas-container {
+      width: 100%;
+      max-width: 1000px;
+      aspect-ratio: 1000 / 700; /* 自動保持 10:7 比例縮放 */
+      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 強制 p5.js 畫布自適應容器大小 */
+    #canvas-container canvas {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="canvas-container"></div>
+
+  <!-- 引入 sketch.js 主程式 -->
+  <script src="sketch.js"></script>
+</body>
+</html>
